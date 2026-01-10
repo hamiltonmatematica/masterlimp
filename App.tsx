@@ -1,6 +1,6 @@
 
 import React, { useState } from 'react';
-import { SERVICES, PORTFOLIO, WHATSAPP_LINK } from './constants';
+import { SERVICES, PORTFOLIO, WHATSAPP_LINK, DIFFERENTIALS, STATS } from './constants';
 import BeforeAfterSlider from './components/BeforeAfterSlider';
 
 const App: React.FC = () => {
@@ -100,6 +100,46 @@ const App: React.FC = () => {
         </div>
       </section>
 
+      {/* Differentials Section */}
+      <section className="py-24 bg-gray-50">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-20">
+            <h2 className="text-master-blue text-sm font-black uppercase tracking-[0.3em] mb-4">Por que escolher</h2>
+            <h3 className="text-4xl lg:text-5xl font-black text-gray-900">Diferenciais MasterLimp</h3>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {DIFFERENTIALS.map((differential) => (
+              <div key={differential.id} className="bg-white p-8 rounded-2xl shadow-sm hover:shadow-xl transition-all duration-300 group">
+                <div className="w-16 h-16 bg-master-blue/10 text-master-blue rounded-2xl flex items-center justify-center mb-6 group-hover:bg-master-blue group-hover:text-white transition-colors duration-300">
+                  <i className={`fas ${differential.icon} text-2xl`}></i>
+                </div>
+                <h4 className="text-xl font-black mb-3 text-gray-900">{differential.title}</h4>
+                <p className="text-gray-600 leading-relaxed">
+                  {differential.description}
+                </p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* CTA Section 1 */}
+      <section className="py-20 bg-master-green">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <h3 className="text-3xl lg:text-4xl font-black text-white mb-6">
+            Pronto para transformar seu ambiente?
+          </h3>
+          <p className="text-xl text-white/90 mb-8">
+            Solicite um orçamento agora e receba atendimento em até 2 horas!
+          </p>
+          <a href={WHATSAPP_LINK} className="inline-flex items-center gap-3 bg-white text-master-green px-12 py-6 rounded-full font-black text-xl shadow-2xl hover:bg-gray-100 transition">
+            <i className="fab fa-whatsapp text-3xl"></i>
+            Pedir Orçamento Agora
+          </a>
+        </div>
+      </section>
+
       {/* About Section */}
       <section id="sobre" className="py-24 bg-white overflow-hidden">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -187,6 +227,35 @@ const App: React.FC = () => {
           </div>
         </div>
       </section>
+
+      {/* Stats Section */}
+      <section className="py-24 bg-master-blue relative overflow-hidden">
+        <div className="absolute inset-0 opacity-10">
+          <div className="absolute top-0 left-0 w-64 h-64 bg-white rounded-full blur-3xl"></div>
+          <div className="absolute bottom-0 right-0 w-96 h-96 bg-master-green rounded-full blur-3xl"></div>
+        </div>
+
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+          <div className="text-center mb-16">
+            <h2 className="text-white text-sm font-black uppercase tracking-[0.3em] mb-4">Números que</h2>
+            <h3 className="text-4xl lg:text-5xl font-black text-white">Falam por si</h3>
+          </div>
+
+          <div className="grid grid-cols-2 lg:grid-cols-4 gap-8">
+            {STATS.map((stat) => (
+              <div key={stat.id} className="text-center">
+                <div className="text-5xl lg:text-6xl font-black text-master-green mb-2">
+                  {stat.number}{stat.suffix}
+                </div>
+                <div className="text-white/90 text-lg font-medium">
+                  {stat.label}
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
 
       {/* CTA Section */}
       <section className="py-28 relative overflow-hidden bg-master-blue">

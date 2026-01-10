@@ -271,7 +271,7 @@ const App: React.FC = () => {
             <div className="order-1 lg:order-2 relative">
               <div className="relative rounded-[3rem] overflow-hidden shadow-2xl">
                 <img
-                  src="https://images.unsplash.com/photo-1527515637462-cff94eecc1ac?auto=format&fit=crop&q=80"
+                  src="/limpeza.jpeg"
                   alt="Time MasterLimp"
                   className="w-full h-full object-cover aspect-video lg:aspect-square"
                 />

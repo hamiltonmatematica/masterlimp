@@ -293,6 +293,38 @@ const App: React.FC = () => {
         </div>
       </section>
 
+      {/* Nossa História Section */}
+      <section className="py-24 bg-master-blue overflow-hidden">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+            <div className="order-2 lg:order-1">
+              <h2 className="text-white text-sm font-black uppercase tracking-[0.3em] mb-4">Nossa História</h2>
+              <h3 className="text-4xl lg:text-5xl font-black text-white mb-8">
+                Compromisso com a excelência
+              </h3>
+              <p className="text-lg text-white/90 mb-6 leading-relaxed">
+                A Masterlimp nasceu do sonho de empreender com seriedade, oferecendo serviços de limpeza profissional feitos com cuidado, respeito e excelência.
+              </p>
+              <p className="text-lg text-white/90 mb-6 leading-relaxed">
+                Como fundadores, acompanhamos de perto cada etapa do trabalho, garantindo que nossos padrões de qualidade sejam sempre cumpridos.
+              </p>
+              <p className="text-lg text-white/90 leading-relaxed">
+                Acreditamos que a confiança se constrói com compromisso, e é isso que buscamos entregar diariamente a cada cliente.
+              </p>
+            </div>
+            <div className="order-1 lg:order-2 relative">
+              <div className="relative rounded-[3rem] overflow-hidden shadow-2xl">
+                <img
+                  src="/donos.png"
+                  alt="Fundadores MasterLimp"
+                  className="w-full h-full object-cover aspect-[4/3] lg:aspect-square"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Portfolio Section */}
       <section id="resultados" className="py-24 bg-master-blue">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">

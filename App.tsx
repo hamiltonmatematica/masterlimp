@@ -270,9 +270,12 @@ const App: React.FC = () => {
             </div>
             <div className="order-1 lg:order-2 relative">
               <div className="relative rounded-[3rem] overflow-hidden shadow-2xl">
-                <img
-                  src="/limpeza.jpeg"
-                  alt="Time MasterLimp"
+                <video
+                  src="/video_limpando.mp4"
+                  autoPlay
+                  loop
+                  muted
+                  playsInline
                   className="w-full h-full object-cover aspect-video lg:aspect-square"
                 />
               </div>

@@ -94,7 +94,7 @@ const App: React.FC = () => {
             {/* Title */}
             <div className="text-center mb-8">
               <h2 className="text-white text-2xl lg:text-3xl font-black">
-                Transformamos o seu ambiente com perfeição
+                É transformar o seu ambiente com perfeição
               </h2>
             </div>
 

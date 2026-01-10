@@ -31,7 +31,7 @@ const App: React.FC = () => {
             </div>
 
             <button onClick={() => setIsMenuOpen(!isMenuOpen)} className="md:hidden text-master-blue">
-              <i className={`fas ${isMenuOpen ? 'fa-times' : 'fa-bars-staggered'} text-2xl`}></i>
+              <i className={`fas ${isMenuOpen ? 'fa-times' : 'fa-bars'} text-2xl`}></i>
             </button>
           </div>
         </div>

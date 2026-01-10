@@ -72,14 +72,11 @@ const App: React.FC = () => {
               </div>
             </div>
             <div className="relative lg:h-[600px] flex items-center justify-center">
-              <div className="relative w-full aspect-square max-w-lg lg:max-w-none">
-                <div className="absolute inset-0 bg-master-green/10 rounded-[3rem] -rotate-6 scale-105"></div>
-                <img
-                  src="/logo.png"
-                  alt="MasterLimp Logo"
-                  className="w-full h-full object-contain p-16 relative z-10"
-                />
-              </div>
+              <img
+                src="/logo.png"
+                alt="MasterLimp Logo"
+                className="w-full max-w-md lg:max-w-lg object-contain"
+              />
             </div>
           </div>
         </div>

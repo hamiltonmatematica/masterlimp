@@ -72,17 +72,19 @@ const App: React.FC = () => {
               </div>
             </div>
             <div className="relative lg:h-[600px] flex items-center justify-center">
-              {/* Degradê radial de fundo */}
+              {/* Múltiplos círculos decorativos */}
               <div className="absolute inset-0 flex items-center justify-center">
-                <div className="w-[500px] h-[500px] rounded-full bg-gradient-radial from-white/10 via-transparent to-transparent"></div>
+                <div className="absolute w-[700px] h-[700px] rounded-full bg-gradient-radial from-white/20 via-white/5 to-transparent animate-pulse"></div>
+                <div className="absolute w-[550px] h-[550px] rounded-full bg-gradient-radial from-master-green/20 via-master-green/5 to-transparent"></div>
+                <div className="absolute w-[400px] h-[400px] rounded-full bg-white/10"></div>
               </div>
 
-              {/* Logo com brilho */}
+              {/* Logo com brilho intenso */}
               <div className="relative z-10">
                 <img
                   src="/logo.png"
                   alt="MasterLimp Logo"
-                  className="w-full max-w-md lg:max-w-lg object-contain drop-shadow-[0_0_40px_rgba(140,198,63,0.4)] hover:drop-shadow-[0_0_60px_rgba(140,198,63,0.6)] transition-all duration-300"
+                  className="w-full max-w-md lg:max-w-lg object-contain drop-shadow-[0_0_80px_rgba(140,198,63,0.8)] hover:drop-shadow-[0_0_100px_rgba(140,198,63,1)] hover:scale-105 transition-all duration-500"
                 />
               </div>
             </div>

@@ -13,21 +13,21 @@ export const SERVICES: Service[] = [
   },
   {
     id: 'pre-mudanca',
-    title: 'Pré-Mudança',
+    title: 'Pré e Pós-Mudança',
     description: 'Garantimos uma higienização profunda de armários, banheiros e pisos antes de você levar suas malas para o novo lar.',
     icon: 'fa-truck-ramp-box'
   },
   {
-    id: 'escritorios',
-    title: 'Empresas e Escritórios',
-    description: 'Manutenção profissional para garantir um ambiente de trabalho produtivo, limpo e que transmita credibilidade aos seus clientes.',
+    id: 'clinicas-escritorios',
+    title: 'Clínicas e Escritórios',
+    description: 'Pacotes fixos com manutenção profissional para garantir um ambiente de trabalho produtivo, limpo e que transmita credibilidade.',
     icon: 'fa-briefcase'
   },
   {
-    id: 'residencial',
-    title: 'Limpeza Residencial',
-    description: 'Cuidados minuciosos com cada detalhe da sua casa, proporcionando o conforto e a saúde que sua família merece.',
-    icon: 'fa-house-chimney-window'
+    id: 'comercios',
+    title: 'Limpeza de Comércios',
+    description: 'Serviços especializados para restaurantes, lojas e academias. Mantemos seu estabelecimento sempre impecável e acolhedor.',
+    icon: 'fa-store'
   },
   {
     id: 'eventos',

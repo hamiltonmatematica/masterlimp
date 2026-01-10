@@ -86,7 +86,7 @@ const App: React.FC = () => {
       </header>
 
       {/* Services Section */}
-      <section id="servicos" className="py-24 bg-gray-50">
+      <section id="servicos" className="py-24 bg-master-blue-light">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-20">
             <h2 className="text-master-blue text-sm font-black uppercase tracking-[0.3em] mb-4">Soluções Completas</h2>
@@ -96,15 +96,15 @@ const App: React.FC = () => {
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {SERVICES.map((service) => (
-              <div key={service.id} className="bg-white p-10 rounded-[2.5rem] shadow-sm hover:shadow-2xl hover:-translate-y-2 transition-all duration-300 group border border-transparent hover:border-blue-100">
-                <div className="w-16 h-16 bg-blue-50 text-master-blue rounded-2xl flex items-center justify-center mb-8 group-hover:bg-master-blue group-hover:text-white transition-colors duration-500">
+              <div key={service.id} className="bg-master-green p-10 rounded-[2.5rem] shadow-sm hover:shadow-2xl hover:-translate-y-2 transition-all duration-300 group border border-transparent hover:border-green-200">
+                <div className="w-16 h-16 bg-white text-master-blue rounded-2xl flex items-center justify-center mb-8 group-hover:bg-master-blue group-hover:text-white transition-colors duration-500">
                   <i className={`fas ${service.icon} text-2xl`}></i>
                 </div>
-                <h4 className="text-2xl font-black mb-4 text-gray-800">{service.title}</h4>
-                <p className="text-gray-500 leading-relaxed mb-8 text-base">
+                <h4 className="text-2xl font-black mb-4 text-white">{service.title}</h4>
+                <p className="text-white/90 leading-relaxed mb-8 text-base">
                   {service.description}
                 </p>
-                <a href={WHATSAPP_LINK} className="inline-flex items-center gap-2 text-master-blue font-black hover:gap-4 transition-all">
+                <a href={WHATSAPP_LINK} className="inline-flex items-center gap-2 text-white font-black hover:gap-4 transition-all">
                   Pedir Cotação <i className="fas fa-arrow-right"></i>
                 </a>
               </div>
@@ -158,7 +158,7 @@ const App: React.FC = () => {
       </section>
 
       {/* Portfolio Section */}
-      <section id="resultados" className="py-24 bg-gray-50">
+      <section id="resultados" className="py-24 bg-blue-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-20">
             <h2 className="text-master-blue text-sm font-black uppercase tracking-[0.3em] mb-4">Galeria de Resultados</h2>
@@ -241,9 +241,9 @@ const App: React.FC = () => {
               <h5 className="font-black text-gray-900 mb-8 uppercase tracking-widest text-xs">O que fazemos</h5>
               <ul className="space-y-4 text-gray-500 font-medium">
                 <li><a href="#servicos" className="hover:text-master-blue">Limpeza Pós-Obra</a></li>
-                <li><a href="#servicos" className="hover:text-master-blue">Pré-Mudança</a></li>
-                <li><a href="#servicos" className="hover:text-master-blue">Gestão Predial</a></li>
-                <li><a href="#servicos" className="hover:text-master-blue">Higienização Profissional</a></li>
+                <li><a href="#servicos" className="hover:text-master-blue">Pré e Pós-Mudança</a></li>
+                <li><a href="#servicos" className="hover:text-master-blue">Clínicas e Escritórios</a></li>
+                <li><a href="#servicos" className="hover:text-master-blue">Limpeza de Comércios</a></li>
               </ul>
             </div>
 

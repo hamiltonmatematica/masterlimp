@@ -72,11 +72,19 @@ const App: React.FC = () => {
               </div>
             </div>
             <div className="relative lg:h-[600px] flex items-center justify-center">
-              <img
-                src="/logo.png"
-                alt="MasterLimp Logo"
-                className="w-full max-w-md lg:max-w-lg object-contain"
-              />
+              {/* Degradê radial de fundo */}
+              <div className="absolute inset-0 flex items-center justify-center">
+                <div className="w-[500px] h-[500px] rounded-full bg-gradient-radial from-white/10 via-transparent to-transparent"></div>
+              </div>
+
+              {/* Logo com brilho */}
+              <div className="relative z-10">
+                <img
+                  src="/logo.png"
+                  alt="MasterLimp Logo"
+                  className="w-full max-w-md lg:max-w-lg object-contain drop-shadow-[0_0_40px_rgba(140,198,63,0.4)] hover:drop-shadow-[0_0_60px_rgba(140,198,63,0.6)] transition-all duration-300"
+                />
+              </div>
             </div>
           </div>
         </div>

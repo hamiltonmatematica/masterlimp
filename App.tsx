@@ -1,15 +1,99 @@
 
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { SERVICES, PORTFOLIO, WHATSAPP_LINK } from './constants';
 import BeforeAfterSlider from './components/BeforeAfterSlider';
 
 const App: React.FC = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [showPopup, setShowPopup] = useState(true);
+
+  useEffect(() => {
+    // Auto-close popup after 10 seconds
+    const timer = setTimeout(() => {
+      setShowPopup(false);
+    }, 10000);
+
+    return () => clearTimeout(timer);
+  }, []);
 
   return (
     <div className="min-h-screen bg-white flex flex-col text-gray-900">
+      {/* Welcome Popup */}
+      {showPopup && (
+        <div className="fixed inset-0 z-[100] flex items-center justify-center p-4 animate-fadeIn">
+          {/* Overlay */}
+          <div className="absolute inset-0 bg-black/70 backdrop-blur-sm" onClick={() => setShowPopup(false)}></div>
+
+          {/* Modal */}
+          <div className="relative bg-gradient-to-br from-gray-800 to-gray-900 rounded-3xl shadow-2xl max-w-2xl w-full p-8 animate-slideUp">
+            {/* Close Button */}
+            <button
+              onClick={() => setShowPopup(false)}
+              className="absolute top-4 right-4 w-10 h-10 bg-master-blue hover:bg-blue-700 text-white rounded-full flex items-center justify-center transition-colors"
+            >
+              <i className="fas fa-times text-xl"></i>
+            </button>
+
+            {/* Logo */}
+            <div className="flex justify-center mb-6">
+              <img src="/logo.png" alt="MasterLimp" className="h-20 object-contain" />
+            </div>
+
+            {/* Title */}
+            <div className="text-center mb-8">
+              <h2 className="text-white text-2xl lg:text-3xl font-black mb-2">
+                CENTRAL DE ATENDIMENTO
+              </h2>
+              <div className="text-master-green text-4xl lg:text-5xl font-black">
+                {WHATSAPP_LINK.replace('https://wa.me/', '').replace('5511968674496', '(11) 96867-4496')}
+              </div>
+            </div>
+
+            {/* Contact Info */}
+            <div className="flex flex-col sm:flex-row justify-center gap-4 mb-8 text-white/90">
+              <div className="flex items-center justify-center gap-2">
+                <i className="fab fa-whatsapp text-master-green text-xl"></i>
+                <span>(11) 96867-4496</span>
+              </div>
+              <div className="flex items-center justify-center gap-2">
+                <i className="fab fa-instagram text-master-green text-xl"></i>
+                <span>@masterlimp.sp</span>
+              </div>
+            </div>
+
+            {/* Services Grid */}
+            <div className="grid grid-cols-2 gap-3 mb-8">
+              <div className="flex items-center gap-2 text-white">
+                <i className="fas fa-check-square text-master-green text-xl"></i>
+                <span className="text-sm">Limpeza Pós-Obra</span>
+              </div>
+              <div className="flex items-center gap-2 text-white">
+                <i className="fas fa-check-square text-master-green text-xl"></i>
+                <span className="text-sm">Pré e Pós-Mudança</span>
+              </div>
+              <div className="flex items-center gap-2 text-white">
+                <i className="fas fa-check-square text-master-green text-xl"></i>
+                <span className="text-sm">Clínicas e Escritórios</span>
+              </div>
+              <div className="flex items-center gap-2 text-white">
+                <i className="fas fa-check-square text-master-green text-xl"></i>
+                <span className="text-sm">Limpeza de Comércios</span>
+              </div>
+            </div>
+
+            {/* CTA Button */}
+            <a
+              href={WHATSAPP_LINK}
+              className="block w-full bg-master-green hover:bg-green-600 text-white text-center py-4 rounded-xl font-black text-lg transition-colors"
+            >
+              Solicitar Orçamento Agora
+            </a>
+          </div>
+        </div>
+      )}
+
       {/* Navigation */}
-      <nav className="sticky top-0 z-50 bg-white/95 backdrop-blur-md border-b border-gray-100">
+      <nav className="sticky top-0 z-50 bg-white/95 backdrop-blur-md border-b border-gray-100 rounded-b-3xl shadow-lg">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between items-center h-20">
             <div className="flex items-center">

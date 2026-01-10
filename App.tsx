@@ -53,8 +53,8 @@ const App: React.FC = () => {
 
             {/* Title */}
             <div className="text-center mb-8">
-              <h2 className="text-white text-2xl lg:text-3xl font-black mb-2">
-                CENTRAL DE ATENDIMENTO
+              <h2 className="text-white text-xl lg:text-2xl font-black mb-2">
+                Transformamos o seu ambiente com perfeição
               </h2>
               <div className="text-master-green text-4xl lg:text-5xl font-black font-mono">
                 {phoneCounter.toString().replace(/(\d{2})(\d{2})(\d{5})(\d{4})/, '($1) $2$3-$4')}
@@ -73,23 +73,31 @@ const App: React.FC = () => {
               </div>
             </div>
 
-            {/* Services Grid */}
-            <div className="grid grid-cols-2 gap-3 mb-8">
-              <div className="flex items-center gap-2 text-white">
-                <i className="fas fa-check-square text-master-green text-xl"></i>
-                <span className="text-sm">Limpeza Pós-Obra</span>
+            {/* Services List */}
+            <div className="space-y-2 mb-8">
+              <div className="flex items-center gap-3 text-white">
+                <i className="fas fa-check-square text-master-green text-lg"></i>
+                <span>Limpeza Pós Obra</span>
               </div>
-              <div className="flex items-center gap-2 text-white">
-                <i className="fas fa-check-square text-master-green text-xl"></i>
-                <span className="text-sm">Pré e Pós-Mudança</span>
+              <div className="flex items-center gap-3 text-white">
+                <i className="fas fa-check-square text-master-green text-lg"></i>
+                <span>Limpeza Pré e Pós Mudança</span>
               </div>
-              <div className="flex items-center gap-2 text-white">
-                <i className="fas fa-check-square text-master-green text-xl"></i>
-                <span className="text-sm">Clínicas e Escritórios</span>
+              <div className="flex items-center gap-3 text-white">
+                <i className="fas fa-check-square text-master-green text-lg"></i>
+                <span>Limpeza de Escritórios</span>
               </div>
-              <div className="flex items-center gap-2 text-white">
-                <i className="fas fa-check-square text-master-green text-xl"></i>
-                <span className="text-sm">Limpeza de Comércios</span>
+              <div className="flex items-center gap-3 text-white">
+                <i className="fas fa-check-square text-master-green text-lg"></i>
+                <span>Limpeza de Clínicas</span>
+              </div>
+              <div className="flex items-center gap-3 text-white">
+                <i className="fas fa-check-square text-master-green text-lg"></i>
+                <span>Limpeza de Comércios</span>
+              </div>
+              <div className="flex items-center gap-3 text-white">
+                <i className="fas fa-check-square text-master-green text-lg"></i>
+                <span>Conservação de Ambientes</span>
               </div>
             </div>
 

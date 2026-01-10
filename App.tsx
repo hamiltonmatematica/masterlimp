@@ -104,10 +104,15 @@ const App: React.FC = () => {
                 <i className="fab fa-whatsapp text-master-green text-xl"></i>
                 <span>(11) 96867-4496</span>
               </div>
-              <div className="flex items-center justify-center gap-2">
+              <a
+                href="https://www.instagram.com/masterlimp.sp"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center justify-center gap-2 hover:text-master-green transition-colors"
+              >
                 <i className="fab fa-instagram text-master-green text-xl"></i>
                 <span>@masterlimp.sp</span>
-              </div>
+              </a>
             </div>
 
             {/* Services List */}

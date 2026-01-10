@@ -1,11 +1,15 @@
 
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import { SERVICES, PORTFOLIO, WHATSAPP_LINK } from './constants';
 import BeforeAfterSlider from './components/BeforeAfterSlider';
 
 const App: React.FC = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [showPopup, setShowPopup] = useState(true);
+  const [satisfactionCount, setSatisfactionCount] = useState(0);
+  const [projectsCount, setProjectsCount] = useState(0);
+  const [hasAnimated, setHasAnimated] = useState(false);
+  const statsRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
     // Auto-close popup after 10 seconds
@@ -15,6 +19,54 @@ const App: React.FC = () => {
 
     return () => clearTimeout(timer);
   }, []);
+
+  useEffect(() => {
+    // Intersection Observer for stats animation
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting && !hasAnimated) {
+            setHasAnimated(true);
+
+            // Animate satisfaction counter
+            let satisfaction = 0;
+            const satisfactionInterval = setInterval(() => {
+              satisfaction += 2;
+              if (satisfaction >= 100) {
+                setSatisfactionCount(100);
+                clearInterval(satisfactionInterval);
+              } else {
+                setSatisfactionCount(satisfaction);
+              }
+            }, 20);
+
+            // Animate projects counter
+            let projects = 0;
+            const projectsInterval = setInterval(() => {
+              projects += 10;
+              if (projects >= 500) {
+                setProjectsCount(500);
+                clearInterval(projectsInterval);
+              } else {
+                setProjectsCount(projects);
+              }
+            }, 20);
+          }
+        });
+      },
+      { threshold: 0.3 }
+    );
+
+    if (statsRef.current) {
+      observer.observe(statsRef.current);
+    }
+
+    return () => {
+      if (statsRef.current) {
+        observer.unobserve(statsRef.current);
+      }
+    };
+  }, [hasAnimated]);
 
   return (
     <div className="min-h-screen bg-white flex flex-col text-gray-900">
@@ -205,13 +257,13 @@ const App: React.FC = () => {
                 Não somos apenas uma empresa de limpeza. Somos parceiros que entendem que um ambiente limpo é sinônimo de saúde, produtividade e qualidade de vida. Atuamos em toda São Paulo com agilidade e os melhores produtos do mercado.
               </p>
 
-              <div className="grid grid-cols-2 gap-8">
+              <div ref={statsRef} className="grid grid-cols-2 gap-8">
                 <div className="p-6 bg-gray-50 rounded-2xl border border-gray-100">
-                  <span className="block text-3xl font-black text-master-blue mb-2">100%</span>
+                  <span className="block text-3xl font-black text-master-blue mb-2">{satisfactionCount}%</span>
                   <span className="text-sm font-bold text-gray-500 uppercase tracking-widest">Satisfação</span>
                 </div>
                 <div className="p-6 bg-gray-50 rounded-2xl border border-gray-100">
-                  <span className="block text-3xl font-black text-master-green mb-2">+500</span>
+                  <span className="block text-3xl font-black text-master-green mb-2">+{projectsCount}</span>
                   <span className="text-sm font-bold text-gray-500 uppercase tracking-widest">Obras Limpas</span>
                 </div>
               </div>

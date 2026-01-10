@@ -35,12 +35,6 @@ export const SERVICES: Service[] = [
     description: 'Sua festa acabou e a bagunça ficou? Nossa equipe entra em ação para deixar tudo organizado e limpo em tempo recorde.',
     icon: 'fa-champagne-glasses'
   },
-  {
-    id: 'clinicas',
-    title: 'Clínicas e Consultórios',
-    description: 'Protocolos rigorosos de desinfecção para garantir a segurança biológica e o bem-estar de pacientes e profissionais.',
-    icon: 'fa-hand-holding-medical'
-  }
 ];
 
 export const PORTFOLIO: BeforeAfterImage[] = [

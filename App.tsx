@@ -64,7 +64,7 @@ const App: React.FC = () => {
               <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
                 <a href={WHATSAPP_LINK} className="bg-white hover:bg-gray-100 text-master-blue px-10 py-5 rounded-2xl font-black text-lg text-center transition-all shadow-xl shadow-white/20 flex items-center justify-center gap-3">
                   <i className="fab fa-whatsapp text-2xl"></i>
-                  Solicitar Preço Agora
+                  Solicitar Orçamento
                 </a>
                 <a href="#servicos" className="bg-master-green hover:bg-green-600 text-white px-10 py-5 rounded-2xl font-bold text-lg text-center transition shadow-xl shadow-green-100">
                   Ver Serviços

@@ -50,18 +50,18 @@ const App: React.FC = () => {
       {/* Hero Section */}
       <header className="relative py-16 lg:py-28 overflow-hidden bg-master-blue">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-            <div className="relative z-10 text-center lg:text-left">
+          <div className="max-w-4xl mx-auto">
+            <div className="relative z-10 text-center">
               <div className="inline-flex items-center gap-2 px-4 py-2 bg-master-green text-white rounded-full text-xs font-bold uppercase tracking-widest mb-8">
                 <i className="fas fa-certificate"></i> Qualidade Garantida
               </div>
               <h1 className="text-5xl lg:text-7xl font-black mb-8 leading-[1.1] text-white">
                 Transformamos o seu <span className="text-master-green">ambiente</span> com perfeição.
               </h1>
-              <p className="text-xl text-white/90 mb-10 leading-relaxed max-w-xl mx-auto lg:mx-0">
+              <p className="text-xl text-white/90 mb-10 leading-relaxed max-w-2xl mx-auto">
                 Seja após uma obra cansativa ou para manter sua empresa impecável, a MasterLimp entrega o brilho e a organização que você procura.
               </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
+              <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <a href={WHATSAPP_LINK} className="bg-white hover:bg-gray-100 text-master-blue px-10 py-5 rounded-2xl font-black text-lg text-center transition-all shadow-xl shadow-white/20 flex items-center justify-center gap-3">
                   <i className="fab fa-whatsapp text-2xl"></i>
                   Solicitar Orçamento
@@ -69,23 +69,6 @@ const App: React.FC = () => {
                 <a href="#servicos" className="bg-master-green hover:bg-green-600 text-white px-10 py-5 rounded-2xl font-bold text-lg text-center transition shadow-xl shadow-green-100">
                   Ver Serviços
                 </a>
-              </div>
-            </div>
-            <div className="relative lg:h-[600px] flex items-center justify-center">
-              {/* Múltiplos círculos decorativos */}
-              <div className="absolute inset-0 flex items-center justify-center">
-                <div className="absolute w-[700px] h-[700px] rounded-full bg-gradient-radial from-white/20 via-white/5 to-transparent animate-pulse"></div>
-                <div className="absolute w-[550px] h-[550px] rounded-full bg-gradient-radial from-master-green/20 via-master-green/5 to-transparent"></div>
-                <div className="absolute w-[400px] h-[400px] rounded-full bg-white/10"></div>
-              </div>
-
-              {/* Logo com brilho intenso */}
-              <div className="relative z-10">
-                <img
-                  src="/logo.png"
-                  alt="MasterLimp Logo"
-                  className="w-full max-w-md lg:max-w-lg object-contain drop-shadow-[0_0_80px_rgba(140,198,63,0.8)] hover:drop-shadow-[0_0_100px_rgba(140,198,63,1)] hover:scale-105 transition-all duration-500"
-                />
               </div>
             </div>
           </div>

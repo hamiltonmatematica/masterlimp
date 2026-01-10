@@ -201,10 +201,10 @@ const App: React.FC = () => {
               <div className="inline-flex items-center gap-2 px-4 py-2 bg-master-green text-white rounded-full text-xs font-bold uppercase tracking-widest mb-8">
                 <i className="fas fa-certificate"></i> Qualidade Garantida
               </div>
-              <h1 className="text-5xl lg:text-7xl font-black mb-8 leading-[1.1] text-white">
+              <h1 className="text-4xl lg:text-7xl font-black mb-8 leading-[1.1] text-white">
                 Transformamos o seu <span className="text-master-green">ambiente</span> com perfeição.
               </h1>
-              <p className="text-xl text-white/90 mb-10 leading-relaxed max-w-2xl mx-auto">
+              <p className="text-lg lg:text-xl text-white/90 mb-10 leading-relaxed max-w-2xl mx-auto">
                 Seja após uma obra cansativa ou para manter sua empresa impecável, a MasterLimp entrega o brilho e a organização que você procura.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">

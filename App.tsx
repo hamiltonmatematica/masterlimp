@@ -87,9 +87,6 @@ const App: React.FC = () => {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {SERVICES.map((service) => (
               <div key={service.id} className="bg-master-green p-10 rounded-[2.5rem] shadow-sm hover:shadow-2xl hover:-translate-y-2 transition-all duration-300 group border border-transparent hover:border-green-200">
-                <div className="w-16 h-16 bg-white text-master-blue rounded-2xl flex items-center justify-center mb-8 group-hover:bg-master-blue group-hover:text-white transition-colors duration-500">
-                  <i className={`fas ${service.icon} text-2xl`}></i>
-                </div>
                 <h4 className="text-2xl font-black mb-4 text-white">{service.title}</h4>
                 <p className="text-white/90 leading-relaxed mb-8 text-base">
                   {service.description}

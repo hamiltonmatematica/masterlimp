@@ -48,25 +48,25 @@ const App: React.FC = () => {
       </nav>
 
       {/* Hero Section */}
-      <header className="relative py-16 lg:py-28 overflow-hidden bg-white">
+      <header className="relative py-16 lg:py-28 overflow-hidden bg-master-blue">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div className="relative z-10 text-center lg:text-left">
-              <div className="inline-flex items-center gap-2 px-4 py-2 bg-blue-50 text-master-blue rounded-full text-xs font-bold uppercase tracking-widest mb-8">
+              <div className="inline-flex items-center gap-2 px-4 py-2 bg-master-green text-white rounded-full text-xs font-bold uppercase tracking-widest mb-8">
                 <i className="fas fa-certificate"></i> Qualidade Garantida
               </div>
-              <h1 className="text-5xl lg:text-7xl font-black mb-8 leading-[1.1] text-gray-900">
-                Transformamos o seu <span className="text-master-blue">ambiente</span> com perfeição.
+              <h1 className="text-5xl lg:text-7xl font-black mb-8 leading-[1.1] text-white">
+                Transformamos o seu <span className="text-master-green">ambiente</span> com perfeição.
               </h1>
-              <p className="text-xl text-gray-500 mb-10 leading-relaxed max-w-xl mx-auto lg:mx-0">
+              <p className="text-xl text-white/90 mb-10 leading-relaxed max-w-xl mx-auto lg:mx-0">
                 Seja após uma obra cansativa ou para manter sua empresa impecável, a MasterLimp entrega o brilho e a organização que você procura.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
-                <a href={WHATSAPP_LINK} className="bg-master-blue hover:bg-blue-800 text-white px-10 py-5 rounded-2xl font-black text-lg text-center transition-all shadow-xl shadow-blue-100 flex items-center justify-center gap-3">
+                <a href={WHATSAPP_LINK} className="bg-white hover:bg-gray-100 text-master-blue px-10 py-5 rounded-2xl font-black text-lg text-center transition-all shadow-xl shadow-white/20 flex items-center justify-center gap-3">
                   <i className="fab fa-whatsapp text-2xl"></i>
                   Solicitar Preço Agora
                 </a>
-                <a href="#servicos" className="bg-gray-100 hover:bg-gray-200 text-gray-700 px-10 py-5 rounded-2xl font-bold text-lg text-center transition">
+                <a href="#servicos" className="bg-master-green hover:bg-green-600 text-white px-10 py-5 rounded-2xl font-bold text-lg text-center transition shadow-xl shadow-green-100">
                   Ver Serviços
                 </a>
               </div>
@@ -77,7 +77,7 @@ const App: React.FC = () => {
                 <img
                   src="/logo.png"
                   alt="MasterLimp Logo"
-                  className="w-full h-full object-contain p-16 bg-white rounded-[3rem] shadow-2xl relative z-10"
+                  className="w-full h-full object-contain p-16 relative z-10"
                 />
               </div>
             </div>
@@ -89,9 +89,9 @@ const App: React.FC = () => {
       <section id="servicos" className="py-24 bg-master-blue-light">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-20">
-            <h2 className="text-master-blue text-sm font-black uppercase tracking-[0.3em] mb-4">Soluções Completas</h2>
+            <h2 className="text-white text-sm font-black uppercase tracking-[0.3em] mb-4">Soluções Completas</h2>
             <h3 className="text-4xl lg:text-5xl font-black text-gray-900 mb-6">Como podemos te ajudar hoje?</h3>
-            <p className="text-gray-500 max-w-2xl mx-auto text-lg">Escolha o serviço que melhor atende à sua necessidade e deixe o trabalho pesado com a gente.</p>
+            <p className="text-white/90 max-w-2xl mx-auto text-lg">Escolha o serviço que melhor atende à sua necessidade e deixe o trabalho pesado com a gente.</p>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -114,7 +114,7 @@ const App: React.FC = () => {
       </section>
 
       {/* About Section */}
-      <section id="sobre" className="py-24 bg-white overflow-hidden">
+      <section id="sobre" className="py-24 bg-blue-50 overflow-hidden">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
             <div className="order-2 lg:order-1">
@@ -158,12 +158,12 @@ const App: React.FC = () => {
       </section>
 
       {/* Portfolio Section */}
-      <section id="resultados" className="py-24 bg-blue-50">
+      <section id="resultados" className="py-24 bg-master-blue">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-20">
-            <h2 className="text-master-blue text-sm font-black uppercase tracking-[0.3em] mb-4">Galeria de Resultados</h2>
-            <h3 className="text-4xl lg:text-5xl font-black text-gray-900">Veja o brilho que entregamos</h3>
-            <p className="text-gray-500 mt-6 max-w-2xl mx-auto text-lg">Deslize a barra para ver a transformação que realizamos nos ambientes de nossos clientes.</p>
+            <h2 className="text-white text-sm font-black uppercase tracking-[0.3em] mb-4">Galeria de Resultados</h2>
+            <h3 className="text-4xl lg:text-5xl font-black text-white">Veja o brilho que entregamos</h3>
+            <p className="text-white/90 mt-6 max-w-2xl mx-auto text-lg">Deslize a barra para ver a transformação que realizamos nos ambientes de nossos clientes.</p>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
@@ -202,7 +202,7 @@ const App: React.FC = () => {
       </section>
 
       {/* CTA Section */}
-      <section className="py-28 relative overflow-hidden bg-master-green">
+      <section className="py-28 relative overflow-hidden bg-master-blue">
         <div className="absolute top-0 right-0 w-64 h-64 bg-white/10 rounded-full blur-3xl -mr-32 -mt-32"></div>
         <div className="absolute bottom-0 left-0 w-64 h-64 bg-white/10 rounded-full blur-3xl -ml-32 -mb-32"></div>
 

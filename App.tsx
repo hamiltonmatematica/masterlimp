@@ -281,7 +281,7 @@ const App: React.FC = () => {
                   loop
                   muted
                   playsInline
-                  className="w-full h-full object-cover aspect-video lg:aspect-square"
+                  className="w-full h-full object-cover aspect-[4/3] min-h-[350px] lg:aspect-square lg:min-h-0"
                 />
               </div>
               <div className="absolute -bottom-8 -left-8 bg-master-blue text-white p-10 rounded-[2.5rem] shadow-2xl hidden md:block max-w-[280px]">

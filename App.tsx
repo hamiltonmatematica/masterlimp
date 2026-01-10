@@ -6,7 +6,6 @@ import BeforeAfterSlider from './components/BeforeAfterSlider';
 const App: React.FC = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [showPopup, setShowPopup] = useState(true);
-  const [phoneCounter, setPhoneCounter] = useState(0);
 
   useEffect(() => {
     // Auto-close popup after 10 seconds
@@ -16,17 +15,6 @@ const App: React.FC = () => {
 
     return () => clearTimeout(timer);
   }, []);
-
-  useEffect(() => {
-    // Animate phone number counter
-    if (showPopup && phoneCounter < 11968674496) {
-      const increment = Math.ceil(11968674496 / 50); // 50 steps
-      const timer = setTimeout(() => {
-        setPhoneCounter(prev => Math.min(prev + increment, 11968674496));
-      }, 30);
-      return () => clearTimeout(timer);
-    }
-  }, [showPopup, phoneCounter]);
 
   return (
     <div className="min-h-screen bg-white flex flex-col text-gray-900">
@@ -53,12 +41,9 @@ const App: React.FC = () => {
 
             {/* Title */}
             <div className="text-center mb-8">
-              <h2 className="text-white text-xl lg:text-2xl font-black mb-2">
+              <h2 className="text-white text-2xl lg:text-3xl font-black">
                 Transformamos o seu ambiente com perfeição
               </h2>
-              <div className="text-master-green text-4xl lg:text-5xl font-black font-mono">
-                {phoneCounter.toString().replace(/(\d{2})(\d{2})(\d{5})(\d{4})/, '($1) $2$3-$4')}
-              </div>
             </div>
 
             {/* Contact Info */}

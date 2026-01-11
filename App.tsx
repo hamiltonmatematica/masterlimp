@@ -375,7 +375,7 @@ const App: React.FC = () => {
         <div className="absolute bottom-0 left-0 w-64 h-64 bg-white/10 rounded-full blur-3xl -ml-32 -mb-32"></div>
 
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center text-white relative z-10">
-          <h2 className="text-5xl lg:text-7xl font-black mb-10 leading-tight">Chega de sujeira, <br className="hidden sm:block" />Chame a <span>MasterLimp</span>.</h2>
+          <h2 className="text-5xl lg:text-7xl font-black mb-10 leading-tight">Chega de sujeira, <br className="hidden sm:block" />chame a <span>MasterLimp</span>.</h2>
           <div className="flex flex-col sm:flex-row items-center justify-center gap-6">
             <a href={WHATSAPP_LINK} className="bg-white text-master-green px-12 py-6 rounded-full font-black text-2xl flex items-center gap-4 shadow-2xl hover:bg-gray-100 transition">
               <i className="fab fa-whatsapp text-3xl"></i>

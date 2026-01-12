@@ -317,7 +317,7 @@ const App: React.FC = () => {
                 <img
                   src="/donos.png"
                   alt="Fundadores MasterLimp"
-                  className="w-full h-full object-cover aspect-square lg:aspect-square"
+                  className="w-full h-full object-cover object-top bg-white"
                 />
               </div>
             </div>
@@ -400,9 +400,6 @@ const App: React.FC = () => {
               <p className="text-gray-500 text-base leading-relaxed mb-8">
                 Referência em limpeza técnica e pós-obra em São Paulo. Excelência, sustentabilidade e compromisso com o resultado.
               </p>
-              <div className="flex gap-4">
-                <a href="https://instagram.com/masterlimp.sp" target="_blank" rel="noreferrer" className="w-10 h-10 bg-gray-100 rounded-full flex items-center justify-center text-gray-600 hover:bg-master-blue hover:text-white transition"><i className="fab fa-instagram"></i></a>
-              </div>
             </div>
 
             <div>
@@ -440,6 +437,13 @@ const App: React.FC = () => {
                   <div>
                     <p className="text-xs font-bold text-gray-400 uppercase">E-mail</p>
                     <p className="font-black text-gray-900 text-sm">contratemasterlimp@gmail.com</p>
+                  </div>
+                </li>
+                <li className="flex gap-4">
+                  <i className="fab fa-instagram text-2xl text-pink-600"></i>
+                  <div>
+                    <p className="text-xs font-bold text-gray-400 uppercase">Instagram</p>
+                    <a href="https://www.instagram.com/masterlimp.sp" target="_blank" rel="noopener noreferrer" className="font-black text-gray-900 hover:text-pink-600 transition">@masterlimp.sp</a>
                   </div>
                 </li>
               </ul>
